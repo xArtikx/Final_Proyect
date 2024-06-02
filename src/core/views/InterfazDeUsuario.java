@@ -24,7 +24,7 @@ public class InterfazDeUsuario extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(this);
         //SetImageLabel(jLabel2, "src/imagenes/Settings Button.png");
-        jLabel2.setOpaque(false);
+        //jLabel2.setOpaque(false);
 
     }
 
@@ -37,12 +37,24 @@ public class InterfazDeUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton play (1).png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 260, 290));
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Exit Button (1).png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 220, 90));
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Settings Button (1).png"))); // NOI18N
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel2MouseEntered(evt);
@@ -62,9 +74,9 @@ public class InterfazDeUsuario extends javax.swing.JFrame {
 
     private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
 
-        Color semiTransparentWhite = new Color(255, 255, 255, 128); // 128 es el valor alfa (0-255)
-        jLabel2.setBackground(semiTransparentWhite);
-        jLabel2.setOpaque(true); // Asegúrate de que el JLabel sea opaco
+       // Color semiTransparentWhite = new Color(255, 255, 255, 128); // 128 es el valor alfa (0-255)
+       // jLabel2.setBackground(semiTransparentWhite);
+        //jLabel2.setOpaque(true); // Asegúrate de que el JLabel sea opaco
 
         ;
 
@@ -72,8 +84,8 @@ public class InterfazDeUsuario extends javax.swing.JFrame {
 
     private void jLabel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseExited
 
-        jLabel2.setBackground(new Color(255, 255, 255, 255)); // Fondo completamente blanco y opaco
-        jLabel2.setOpaque(false); // Restablece la opacidad a su valor anterior si es necesario
+       // jLabel2.setBackground(new Color(255, 255, 255, 255)); // Fondo completamente blanco y opaco
+       // jLabel2.setOpaque(false); // Restablece la opacidad a su valor anterior si es necesario
 
     }//GEN-LAST:event_jLabel2MouseExited
 
@@ -123,5 +135,7 @@ public class InterfazDeUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }
