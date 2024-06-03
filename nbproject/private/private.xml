@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/andre/Desktop/Pianormagedon/src/imagenes/backgroundImage.png</file>
             <file>file:/C:/Users/andre/Desktop/Pianormagedon/src/core/views/InterfazDeUsuario.java</file>
-            <file>file:/C:/Users/andre/Desktop/Pianormagedon/src/imagenes/Settings%20Button.png</file>
-            <file>file:/C:/Users/andre/Desktop/Pianormagedon/src/imagenes/BLANCO%20760X440PX_0.png</file>
-            <file>file:/C:/Users/andre/Desktop/Pianormagedon/src/imagenes/backgroundImage.jpg</file>
+            <file>file:/C:/Users/andre/Desktop/Pianormagedon/src/imagenes/playButtonPressedImage.png</file>
+            <file>file:/C:/Users/andre/Desktop/Pianormagedon/src/imagenes/settingsButtonPressedImage.png</file>
+            <file>file:/C:/Users/andre/Desktop/Pianormagedon/src/imagenes/exitButtonPressedImage.png</file>
         </group>
     </open-files>
 </project-private>

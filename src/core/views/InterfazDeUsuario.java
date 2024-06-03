@@ -4,8 +4,6 @@
  */
 package core.views;
 
-import java.awt.Color;
-import static java.awt.Color.WHITE;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -23,6 +21,9 @@ public class InterfazDeUsuario extends javax.swing.JFrame {
     public InterfazDeUsuario() {
         initComponents();
         this.setLocationRelativeTo(this);
+        playButtonPressed.setVisible(false);
+        settingsButtonPressed.setVisible(false);
+        exitButtonPressed.setVisible(false);
         //SetImageLabel(jLabel2, "src/imagenes/Settings Button.png");
         //jLabel2.setOpaque(false);
 
@@ -37,57 +38,166 @@ public class InterfazDeUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        exitButtonPressed = new javax.swing.JLabel();
+        settingsButtonPressed = new javax.swing.JLabel();
+        playButtonPressed = new javax.swing.JLabel();
+        playButton = new javax.swing.JLabel();
+        exitButton = new javax.swing.JLabel();
+        settingsButton = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton play (1).png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 260, 290));
-
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Exit Button (1).png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 220, 90));
-
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Settings Button (1).png"))); // NOI18N
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel2MouseEntered(evt);
+        exitButtonPressed.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitButtonPressed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/exitButtonPressedImage.png"))); // NOI18N
+        exitButtonPressed.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                exitButtonPressedMousePressed(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel2MouseExited(evt);
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                exitButtonPressedMouseReleased(evt);
             }
         });
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 530, 240, 70));
+        getContentPane().add(exitButtonPressed, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 220, 90));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/backgroundImage.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        settingsButtonPressed.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        settingsButtonPressed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/settingsButtonPressedImage.png"))); // NOI18N
+        settingsButtonPressed.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                settingsButtonPressedMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                settingsButtonPressedMouseExited(evt);
+            }
+        });
+        getContentPane().add(settingsButtonPressed, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 530, 240, 70));
+
+        playButtonPressed.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        playButtonPressed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/playButtonPressedImage.png"))); // NOI18N
+        playButtonPressed.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                playButtonPressedMouseReleased(evt);
+            }
+        });
+        getContentPane().add(playButtonPressed, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 260, 290));
+
+        playButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        playButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/playButtonImage.png"))); // NOI18N
+        playButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                playButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                playButtonMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                playButtonMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                playButtonMouseReleased(evt);
+            }
+        });
+        getContentPane().add(playButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 260, 290));
+
+        exitButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/exitButtonImage.png"))); // NOI18N
+        getContentPane().add(exitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 420, 220, 90));
+
+        settingsButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        settingsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/settingsButtonImage.png"))); // NOI18N
+        settingsButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                settingsButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                settingsButtonMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                settingsButtonMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                settingsButtonMouseReleased(evt);
+            }
+        });
+        getContentPane().add(settingsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 530, 240, 70));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/backgroundImage.png"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
+    private void settingsButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsButtonMouseEntered
 
-       // Color semiTransparentWhite = new Color(255, 255, 255, 128); // 128 es el valor alfa (0-255)
-       // jLabel2.setBackground(semiTransparentWhite);
+        // Color semiTransparentWhite = new Color(255, 255, 255, 128); // 128 es el valor alfa (0-255)
+        // jLabel2.setBackground(semiTransparentWhite);
         //jLabel2.setOpaque(true); // Asegúrate de que el JLabel sea opaco
 
-        ;
+    }//GEN-LAST:event_settingsButtonMouseEntered
 
-    }//GEN-LAST:event_jLabel2MouseEntered
+    private void settingsButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsButtonMouseExited
 
-    private void jLabel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseExited
+        // jLabel2.setBackground(new Color(255, 255, 255, 255)); // Fondo completamente blanco y opaco
+        // jLabel2.setOpaque(false); // Restablece la opacidad a su valor anterior si es necesario
 
-       // jLabel2.setBackground(new Color(255, 255, 255, 255)); // Fondo completamente blanco y opaco
-       // jLabel2.setOpaque(false); // Restablece la opacidad a su valor anterior si es necesario
+    }//GEN-LAST:event_settingsButtonMouseExited
 
-    }//GEN-LAST:event_jLabel2MouseExited
+    private void playButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playButtonMousePressed
+        playButtonPressed.setVisible(true);
+        playButton.setVisible(false);
+
+    }//GEN-LAST:event_playButtonMousePressed
+
+    private void playButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playButtonMouseEntered
+        //playButtonPressed.setVisible(true);
+        //playButton.setVisible(false);
+
+    }//GEN-LAST:event_playButtonMouseEntered
+
+    private void playButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playButtonMouseReleased
+        playButton.setVisible(true);
+        playButtonPressed.setVisible(false);
+    }//GEN-LAST:event_playButtonMouseReleased
+
+    private void playButtonPressedMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playButtonPressedMouseReleased
+        //playButton.setVisible(true);
+        //playButtonPressed.setVisible(false);
+    }//GEN-LAST:event_playButtonPressedMouseReleased
+
+    private void playButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playButtonMouseExited
+        //playButton.setVisible(true);
+        //playButtonPressed.setVisible(false);
+    }//GEN-LAST:event_playButtonMouseExited
+
+    private void settingsButtonPressedMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsButtonPressedMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_settingsButtonPressedMouseEntered
+
+    private void settingsButtonPressedMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsButtonPressedMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_settingsButtonPressedMouseExited
+
+    private void settingsButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsButtonMousePressed
+        settingsButtonPressed.setVisible(true);
+        settingsButton.setVisible(false);
+    }//GEN-LAST:event_settingsButtonMousePressed
+
+    private void settingsButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsButtonMouseReleased
+        settingsButton.setVisible(true);
+        settingsButtonPressed.setVisible(false);
+    }//GEN-LAST:event_settingsButtonMouseReleased
+
+    private void exitButtonPressedMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitButtonPressedMousePressed
+        exitButtonPressed.setVisible(true);
+        exitButton.setVisible(false);
+    }//GEN-LAST:event_exitButtonPressedMousePressed
+
+    private void exitButtonPressedMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitButtonPressedMouseReleased
+        exitButton.setVisible(true);
+        exitButtonPressed.setVisible(false);
+    }//GEN-LAST:event_exitButtonPressedMouseReleased
 
     /**
      * @param args the command line arguments
@@ -133,9 +243,12 @@ public class InterfazDeUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel background;
+    private javax.swing.JLabel exitButton;
+    private javax.swing.JLabel exitButtonPressed;
+    private javax.swing.JLabel playButton;
+    private javax.swing.JLabel playButtonPressed;
+    private javax.swing.JLabel settingsButton;
+    private javax.swing.JLabel settingsButtonPressed;
     // End of variables declaration//GEN-END:variables
 }
